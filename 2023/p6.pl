@@ -30,7 +30,6 @@ sub p {
     else {
         @time = ( 0,join("", split ' ', $l->[0]) =~ s/.*://r );
         @distance = ( 0,join("", split ' ', $l->[1]) =~ s/.*://r );
-        say Dumper \@time;
     }
 
     my $res = 1;
@@ -46,27 +45,3 @@ sub p {
     }
     $res;
 }
-
-
-
-# we know holding the button for half the time is a winning strategy,
-# so we can binary search for the first loser in either direction
-
-sub find_lowest_time_that_wins {
-    my ($time, $distance) = @_;
-    
-    return 2 if $time == 7;
-    return 0 if $time == 15;
-    return 0 if $time == 30;
-}
-sub find_highest_time_that_wins {
-    my ($time, $distance) = @_;
-    return 5 if $time == 7;
-    return 7 if $time == 15;
-    return 8 if $time == 30;
-}
-
-
-#        my $lo = find_lowest_time_that_wins($time[$i],$distance[$i]);
-#        my $hi = find_highest_time_that_wins($time[$i],$distance[$i]);
-#        $res *= $hi - $lo + 1;
