@@ -74,7 +74,7 @@ close $f;
 my $r = p(1,\@lines0a);
 die "1 got: $r, expected: $exp1\n" if $r != $exp1;
 $r = p(2,\@lines0a);
-#die "2 got: $r, expected: $exp2\n" if $r != $exp2;
+die "2 got: $r, expected: $exp2\n" if $r != $exp2;
 open $f, "< p7-1.txt";
 my (@lines) = <$f>;
 close $f;
