@@ -175,7 +175,7 @@ for my $test (@tests) {
     }
     if ($test->{exp2}) {
         my $r = p(2, $test->{lines});
-#        die "2 got: $r, expected: $test->{exp2}\n" if $r != $test->{exp2};
+        die "2 got: $r, expected: $test->{exp2}\n" if $r != $test->{exp2};
     }
 }
 
