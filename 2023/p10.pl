@@ -223,5 +223,5 @@ sub p {
     }
     $animal->add_distance(0);
     $map->clean;
-    return $q == 1 ? $map->max_distance : return $map->internal_tiles;
+    return $q == 1 ? $map->max_distance : $map->internal_tiles;
 }
